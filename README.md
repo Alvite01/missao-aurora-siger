@@ -98,6 +98,6 @@ Autonomia estimada: 2.76 horas
 ## Integrantes do grupo
 
 - Gabriel Eduardo Alvite Mendes — RM 576675
-- [nome 2] — RM [000000]
-- [nome 3] — RM [000000]
-- [nome 4] — RM [000000]
+- Henrique Ferreira Rungue — RM 575739 
+- Beatriz Lopes de Lima  — RM 575983
+
