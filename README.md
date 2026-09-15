@@ -89,11 +89,8 @@ Autonomia estimada: 2.76 horas
 - `README.md` — este arquivo.
 
 ## Prints da execução
-
-> ⚠️ *Pendente — adicionar aqui os prints depois que o notebook estiver com todas as partes
-> (1 a 6) juntas e rodando do início ao fim. Sugestão: um print mostrando o resultado da
-> verificação para os 10 cenários de teste e outro mostrando o resultado da autonomia
-> energética.*
+<img width="756" height="648" alt="image" src="https://github.com/user-attachments/assets/76a3b977-c9d8-4d81-8745-841a9b246570" />
+<img width="772" height="321" alt="image" src="https://github.com/user-attachments/assets/8adc6df6-3567-47d8-b819-61d967334073" />
 
 ## Integrantes do grupo
 
