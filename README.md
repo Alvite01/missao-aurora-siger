@@ -89,7 +89,11 @@ Autonomia estimada: 2.76 horas
 - `README.md` — este arquivo.
 
 ## Prints da execução
+
+### Verificação de decolagem — algoritmo rodando contra os 10 cenários de teste
 <img width="756" height="648" alt="image" src="https://github.com/user-attachments/assets/76a3b977-c9d8-4d81-8745-841a9b246570" />
+
+### Análise energética — cálculo de autonomia
 <img width="772" height="321" alt="image" src="https://github.com/user-attachments/assets/8adc6df6-3567-47d8-b819-61d967334073" />
 
 ## Integrantes do grupo
