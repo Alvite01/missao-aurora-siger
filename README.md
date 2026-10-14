@@ -84,9 +84,54 @@ Autonomia estimada: 2.76 horas
 
 ## Estrutura do repositório
 
-- `aurora_siger.ipynb` — notebook com todo o código: telemetria, faixas seguras, algoritmo de
-  verificação, script de execução, cálculo de autonomia energética e reflexão crítica.
+- `aurora_siger.ipynb` — notebook da Fase 1 com todo o código: telemetria, faixas seguras, algoritmo
+  de verificação, script de execução, cálculo de autonomia energética e reflexão crítica.
+- `fase2/mgpeb.py` — protótipo em Python da Fase 2 (MGPEB).
+- `fase2/Relatorio_MGPEB_Aurora_Siger_Fase2.pdf` — relatório técnico da Fase 2.
 - `README.md` — este arquivo.
+
+## Fase 2 — MGPEB (pouso e estabilização da base)
+
+Na Fase 2 o projeto passa da decolagem para o pouso em Marte. O script `fase2/mgpeb.py` simula como
+a base organiza o pouso de cinco módulos (energia, habitação, suporte médico, laboratório e
+logística) e reúne o que foi visto na fase:
+
+- **Estruturas lineares:** uma fila com os módulos aguardando autorização, listas para os módulos
+  pousados, em espera e em alerta, e uma pilha de eventos que permite desfazer a última ação.
+- **Busca e ordenação:** busca linear e binária, e ordenação por inserção e por seleção para
+  organizar a fila por prioridade.
+- **Portas lógicas:** a autorização de pouso segue as funções abaixo, escritas com `if / elif / else`.
+- **Função matemática:** a altura durante a descida (linear com o paraquedas e quadrática na
+  frenagem dos retrofoguetes), usada para definir a altura de ignição.
+- **Testes:** no final da execução, a função `testar_regras_limite()` confere dez casos de
+  fronteira (por exemplo combustível em 19% e 20%, vento em 20 e 21 m/s, retrofoguetes a 700 e 699 m).
+
+```
+AUTORIZA = COMB_OK AND ATM_OK AND AREA_LIVRE AND (NOT ERRO_SENSORES)
+ALERTA   = (NOT COMB_OK) OR ERRO_SENSORES
+RETRO    = (ALTURA < LIMIAR) AND (VELOCIDADE > LIMITE) AND (NOT ERRO_SENSORES)
+```
+
+Para executar (só precisa do Python 3, sem instalar nada):
+
+```
+python fase2/mgpeb.py
+```
+
+Trecho da saída:
+
+```
+ENE-02  -> POUSO AUTORIZADO  (todas as condicoes satisfeitas)
+HAB-01  -> POUSO AUTORIZADO  (todas as condicoes satisfeitas)
+MED-05  -> ALERTA            (combustivel abaixo do minimo (18%))
+LAB-03  -> ALERTA            (falha na integridade dos sensores)
+LOG-04  -> ADIADO            (area de pouso ocupada)
+Retrofoguetes disparam em t = 16.5 s, a 680 m de altura
+Resultado: 10/10 testes aprovados
+```
+
+Os valores dos módulos e da descida são fictícios, escolhidos só para a simulação. O relatório com
+os diagramas de portas lógicas, a modelagem matemática e a parte de ESG está em `fase2/`.
 
 ## Prints da execução
 
