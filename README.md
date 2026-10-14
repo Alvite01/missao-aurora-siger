@@ -143,7 +143,6 @@ os diagramas de portas lógicas, a modelagem matemática e a parte de ESG está 
 
 ## Integrantes do grupo
 
-- Gabriel Eduardo Alvite Mendes — RM 576675
-- Henrique Ferreira Rungue — RM 575739 
+- Gabriel Eduardo Alvite Mendes — RM 576675 
 - Beatriz Lopes de Lima  — RM 575983
 
